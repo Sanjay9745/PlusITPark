@@ -1,0 +1,104 @@
+/* Service */
+
+.service-stack {
+    height: 400vh;
+    width: 100%;
+  }
+  .service-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .service-background {
+    height: 100vh;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-image: url("./assets/images/service.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .service-screen-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    font-size: 2rem;
+    color: aliceblue;
+    transition: filter 0.5s ease;
+    padding: 100px;
+  }
+  .service-screen-content h3{
+    font-size: 10rem;
+    font-weight: 500;
+  }
+  .service-screen-content p{
+   
+    font-weight: 300;
+    line-height: 1.5;
+  }
+  .blurred {
+    filter: blur(5px); /* Adjust the blur amount as needed */
+  }
+  
+  .focus-in-expand-fwd {
+    -webkit-animation: focus-in-expand-fwd 0.8s
+      cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: focus-in-expand-fwd 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  @-webkit-keyframes focus-in-expand-fwd {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-transform: translateZ(-800px);
+      transform: translateZ(-800px);
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-filter: blur(0);
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @keyframes focus-in-expand-fwd {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-transform: translateZ(-800px);
+      transform: translateZ(-800px);
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-filter: blur(0);
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .service-screen-content h3{
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+    .service-screen-content p{
+     font-size: 1.3rem;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+    
+.service-screen-content {
+  padding: 30px;
+}
+  }
