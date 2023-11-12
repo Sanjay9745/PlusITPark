@@ -455,6 +455,9 @@ nav .navbar .links li:hover .js-sub-menu {
     display: block;
     color: white;
   }
+  .about-screen-content {
+    padding: 10px;
+}
   .about-screen-content h3{
     font-size: 1rem;
     font-weight: 500;
