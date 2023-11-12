@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="item-hover-card.css" />
     <link rel="stylesheet" href="footer.css" />
     <link rel="stylesheet" href="horizontal-scroll.css" />
+    
   </head>
   <body>
     <nav>
@@ -115,7 +116,7 @@
               <h3>PLUS IT BUSINESS PARK</h3>
             </a>
           </div>
-          <div class="home-button">
+          <div class="home-button magic-hover magic-hover__square">
             <p>View all Works <img src="./assets/images/icons/right-arrow.svg" alt=""></p>
           </div>
         </div>
@@ -196,7 +197,7 @@
                 that are not only visually appealing but also have all the
                 functionalities that you need to run your business smoothly.
               </p>
-              <button>See More</button>
+              <button class="magic-hover magic-hover__square">See More</button>
             </div>
             <div class="separating-us-content-right">
               <img src="./assets/images/bussiness.png" alt="" />
@@ -303,7 +304,7 @@
                 committed to helping you achieve digital excellence.
 
               </p>
-              <button>View More</button>
+              <button class="magic-hover magic-hover__square">View More</button>
             </div>
             <div class="about-us-right">
               <img src="./assets/images/about.png" alt="" />
@@ -330,7 +331,7 @@
           <div class="our-clients-top">
             <p>Our Clients</p>
             <h3>Explore our Clients</h3>
-            <div class="our-client-button">
+            <div class="our-client-button magic-hover magic-hover__square">
               <span>View More</span> <i class="fa-solid fa-arrow-right"></i>
             </div>
           </div>
@@ -437,7 +438,7 @@
         </div>
         <div class="lets-discuss-container">
           <h3>Lets Discuss and Make Something Cool Together</h3>
-          <div class="lets-discuss-button">
+          <div class="lets-discuss-button magic-hover magic-hover__square">
             <p>Apply Meeting </p>
             <img src="./assets/images/icons/right-arrow.svg" alt="">
           </div>
@@ -472,7 +473,7 @@
                 <h3>Subscribe Now!</h3>
                 <div class="footer-send-mail">
                   <input type="text" name="" id="">
-                  <button>Send</button>
+                  <button class="magic-hover magic-hover__square">Send</button>
                 </div>
               </div>
             </div>
@@ -935,6 +936,19 @@ function addAnimation() {
   });
 }
 
+    </script>
+    <!--custom cursor -->
+      <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js"></script>
+      <script type="text/javascript">
+        options = {
+      "cursorOuter": "circle-basic",
+      "hoverEffect": "circle-move",
+      "hoverItemMove": false,
+      "defaultCursor": false,
+      "outerWidth": 30,
+      "outerHeight": 30
+          };
+        magicMouse(options);
     </script>
   </body>
 </html>
