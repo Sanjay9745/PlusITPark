@@ -127,17 +127,7 @@
       align-items:center;
     }
    
-    .item-hover-card.small {
-      width: 280px;
-      height: 320px;
-      background-color: black;
-      position: relative;
-  
-      overflow: hidden;
-  
-      border-radius: 28px;
-    }
-    .item-hover-card.big {
+    .item-hover-card.big , .item-hover-card.small {
       width: 280px;
       height: 320px;
       background-color: black;
@@ -150,7 +140,38 @@
     .item-hover-card-container{
       display: flex;
     }
-    
+    .ag-courses-item_bg {
+      height: 128px;
+      width: 128px;
+      background-color: #ff3399;
+      z-index: 1;
+      position: absolute;
+      bottom: -105px;
+      left: -105px;
+      border-radius: 50%;
+      -webkit-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+    }
+    .item-hover-card:hover .ag-courses-item_bg {
+      -webkit-transform: scale(5);
+      -ms-transform: scale(5);
+      transform: scale(5);
+    }
+    .item-hover-card .ag-courses-item-content {
+      position: absolute;
+      bottom: -100px;
+      left: -275px;
+    }
+    .item-hover-card .ag-courses-item-content h5 {
+      font-size: 1.3rem;
+    }
+    .item-hover-card:hover .ag-courses-item-content {
+      bottom: -200px;
+      left: 35px;
+      z-index: 2;
+      color: white;
+    }
 
 .card-hover-container-top h3 {
     font-size: 2rem;

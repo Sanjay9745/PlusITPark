@@ -117,7 +117,7 @@
             </a>
           </div>
           <div class="home-button magic-hover magic-hover__square">
-            <p>View all Works <img src="./assets/images/icons/right-arrow.svg" alt=""></p>
+            <p>View all Works <img src="./assets/images/icons/right-arrow.svg" alt=""></p>l̥ō
           </div>
         </div>
         <img src="./assets/images/icons/sound-mute.svg" class="sound" alt=""  style="bottom: 100px; right: 50px; position: absolute;width: 35px;">
@@ -127,7 +127,7 @@
         <div class="about-container">
           <div class="about-background">
             <div class="about-screen-content">
-              <h3>#Differentiate insight</h3>
+              <h3>#Differentiated insights</h3>
               <p>
                 The Synergy of AI and Human Intuition By leveraging AI for data
                 analysis and generating insights, human intuition can be used to
@@ -853,61 +853,6 @@ setInterval(updateContent, 5000);
     currentCard.click();
   }
 });
-document.addEventListener("DOMContentLoaded", function () {
-  var cards = document.querySelectorAll(".card");
-  var currentCard = document.querySelector(".card--current");
-  var cardInterval;
-
-  function changeCard() {
-    var nextCard = currentCard.nextElementSibling;
-
-    if (!nextCard) {
-      nextCard = document.querySelector(".card");
-    }
-
-    cards.forEach(function (c) {
-      c.classList.remove("card--current", "card--out", "card--next");
-    });
-
-    currentCard.classList.add("card--out");
-    currentCard = nextCard;
-    currentCard.classList.add("card--current");
-
-    var nextNextCard = currentCard.nextElementSibling;
-
-    if (!nextNextCard) {
-      nextNextCard = document.querySelector(".card");
-    }
-
-    nextNextCard.classList.add("card--next");
-  }
-
-  function setCardInterval() {
-    cardInterval = setInterval(function () {
-      changeCard();
-    }, 5000); // Change card automatically every 5 seconds
-  }
-
-  cards.forEach(function (card) {
-    card.addEventListener("click", function () {
-      clearInterval(cardInterval); // Stop automatic card change when user interacts
-      changeCard();
-      setCardInterval();
-    });
-  });
-
-  // Set initial automatic card change interval
-  setCardInterval();
-
-  if (!currentCard) {
-    var allCards = document.querySelectorAll(".card");
-    currentCard = allCards[allCards.length - 1];
-    currentCard.click();
-  }
-});
-
-
-
       //Scroller
       const scrollers = document.querySelectorAll(".scroller");
 
@@ -949,6 +894,41 @@ function addAnimation() {
       "outerHeight": 30
           };
         magicMouse(options);
+    </script>
+    <!-- Gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script> 
+    <script>
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.from('.web-product-content-left p',{
+        x:-500,
+        rotate:-5,
+        opacity:0,
+        scrollTrigger:{
+          trigger:".web-product-container",
+          start:"top 20%",
+          end:"bottom bottom",
+          scrub:true,
+        }
+      })
+
+
+
+      const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
     </script>
   </body>
 </html>
